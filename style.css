@@ -1,0 +1,430 @@
+/* BASIC RESET & GENERAL STYLE */
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+}
+:root {
+    --primarycolor : #16423C;
+    --backgroundcolor: #E9EFEC;
+    --secondarycolor: #C4DAD2;
+    --accentcolor: #6A9C89;
+    --mobilefontsize: 1rem;
+    --desktopfontsize: 1.025rem;
+    --desktopfontsize: 1.25rem;
+    --bodyfontfamily:
+    --headerfontfamily:
+}
+html {
+    box-sizing: border-box;
+scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--backgroundcolor);
+    font-size:var(--mobilefontsize);
+    box-sizing: border-box;
+    line-height: 1.5;
+    font-weight: bold;
+}
+/* GENERAL STYLE END */
+
+
+/* HEADER STYLE START */
+header#mainheader { width: 100%;
+    height: max-content;
+    position: relative;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+background-image: url(images/pexels-anastasia-shuraeva-5705485.jpg);
+}
+
+div#header {
+    background-image: unset;
+    height: 70px;
+    text-align: center;
+    background-color: var(--primarycolor);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div h1 {
+    font-size: .8rem;
+}
+div#navbar {
+    display: flex;
+    flex-direction: row;
+}
+/* Nav overlay */
+#navbar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+  background-color: var(--accentcolor);
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+.overlaycontent {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin :30px;
+}
+#navbar .overlaycontent  a {
+    text-transform: uppercase;
+    padding: 5px;
+    text-decoration: none;
+    font-size:22px;
+    color: var(--accentcolor);
+display: block;
+transition: 0.3s;
+}
+#navbar .overlaycontent  a:hover, #navbar .overlaycontent  a:focus {
+color: var(--secondarycolor);
+text-decoration: underline;
+}
+.overlay .closebutton {
+    position: absolute;
+    top: 70px;
+    right: 45px;
+    font-size: 60px;
+    color: white;
+}
+.nav-overlay .bar {
+    width: 100%;
+    height: 2px;
+    border: none;
+    background-color:  var(--primarycolor);}
+    .nav-overlay { 
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 25px;
+        background-color:  initial;
+        justify-content: space-between;
+        height: 25px;
+        cursor: pointer;
+        border: none;
+        padding: 2px;
+    }
+    div.headerp {
+        margin-top: 0;
+        box-sizing: border-box;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        color: white;
+        overflow: hidden;
+        padding: 10px;
+    }
+    div.headerp p {
+       font-weight: 900;
+       font-size: 1.4rem;
+        color:white;
+        opacity: 1;
+    }
+/* HEADER STYLE END */
+
+
+
+
+/* MAIN STYLE START */
+div.h2 {
+    text-align: center;
+    margin: 3rem;
+}
+/* Image style */
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+div.imagecontainer {
+    position: relative;
+}
+div.imageitem, .sectionimage {
+    position: inherit;
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 10px;
+}
+.image {
+    border-radius: 10px;
+    position: inherit;
+    border-bottom: 2px solid var(--accentcolor);
+    transition: transform 2s ease-in;
+ }
+
+.image:hover {
+   transform: translateY(5px);
+ }
+ figcaption {
+    text-transform: uppercase;
+    padding-top: 10px;
+    transition: font-weight 2s ease-in-out;
+  }
+ figcaption:hover {
+font-weight: 600;  }
+ /* Image style end */
+
+ /* button style start */
+.mybutton {
+   text-align: center;
+   display: block;
+}
+.btn {
+    height: 60px;
+    width: 200px;
+    color: white;
+    text-align: center;
+    background-color: var(--primarycolor);
+    margin: 1rem 0 2rem 0;
+    border: none;
+    font-size: 18px;
+ }
+.btn:hover, .btn:focus {
+    background-color:#1f5851d6;
+}
+/* button style end */
+hr {
+    height: 2px;
+    width: 100%;
+    background-color:#6A9C89;
+    margin: 1rem 0 ;
+}
+
+/* first section style */
+section.content {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+div.contenttext {
+    display: inherit;
+    flex-direction: column;
+    gap: 30px;
+  padding: 10px;
+}
+
+/* first section style end */
+/* paragraph style */
+p {
+    color: #333;
+}
+p:hover {
+    color: black;
+}
+/* paragraph style end */
+/* second section style/ social */
+
+section.social {
+    text-align: center;
+    margin: 1.4rem 0;
+}
+/* second section style end*/
+/* third section image flex style start*/
+section.imageflex{
+    position: relative;
+  }
+
+/* third section style end*/
+/* MAIN STYLE START END */
+
+/* FOOTER STYLE START */
+footer { width: 100vw;
+    background-color: var(--primarycolor);
+    color: white;
+}
+.footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+}
+/* footer button and input  style */
+
+div.search {padding: 5px;
+    display: flex;
+    flex-flow: row nowrap;
+    height: 50px;
+    width: 100%;
+}
+button#button {  
+    font-size: 18px;
+    background-color: var(--accentcolor);
+}
+button#button:hover {
+    background-color: #315145;
+    color: #ffff;
+}
+::placeholder {
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}/* footer button and input   style end*/
+
+/* footer links style */
+a.link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 10px;
+    width: 150px;
+margin: 1rem;
+}
+a.link:active {
+    color: white;
+    
+}
+a.link:hover {
+     text-decoration: underline;
+     text-transform: uppercase;
+
+ }
+a.link:visited {
+    color: whitesmoke;
+    text-decoration: none;
+ }
+ /* footer links style end */
+ /* footer h3 style */ 
+ footer h3 {
+    margin: 1rem;
+ }
+ /* footer h3 style end */
+
+
+/* FOOTER STYLE START END*/
+/* MEDIA QUERIES FOR TABLETS AND DESKTOPS */
+
+@media screen and (min-width:600px) and (max-width:1023px) {
+body {
+    font-size: 1.3rem;
+}
+#header h1 {
+    font-size: 1.5rem;
+}
+.footer {
+    display: flex;
+    flex-flow: row nowrap;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+}
+div #contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+}
+@media screen and (min-width:1024px)  {
+body {
+    font-size: 1.25rem;
+}
+ 
+#header h1 {
+    font-size: 1.1rem;
+}
+.footer {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+div #contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+footer h3{
+    margin: 0;
+    padding: 0;
+}
+div.headerp p {
+    font-size: 1.1rem;
+}
+div.imageitem {
+     max-width: 100%;
+     flex: 1 1 auto;
+  }
+.imagecontainer  {
+    display: flex;
+flex-flow: row nowrap;}
+
+
+div.mybutton { display: block;
+    flex-flow: unset;
+align-self:safe;
+justify-self:normal;
+ 
+}
+#header {
+    position: static;
+    top: 0;
+    z-index: 100000;
+    width: 100vw;
+}
+section.content { gap: unset;
+    display: flex;
+    flex-direction: row;
+     align-items: center;
+    position: relative;
+    padding: 0;
+    margin: 0 auto;
+    height: auto;
+     width: 80%;
+    justify-content: center;
+}
+div.contenttext {
+   width: 50%;
+   padding: 0;
+    margin: 0;
+   height: auto;
+   background-color:#C4DAD2;
+   height: 499px; text-align: center;
+}
+div.sectionimage {
+    height: fit-content;
+    position: relative;
+    padding: 0;
+    margin: 0;
+ }
+ p.contentp {
+    padding: 35px;
+    text-align: left;
+ }
+ #image {
+    position: relative;
+    top: 0;
+    height: 500px;
+    border-radius: unset;
+    width: 100%;
+ }
+ #navbar {
+    margin-top: 50rem;
+    display: flex  ;
+    flex-direction: row
+ }
+ div.overlaycontent{
+    display: flex ;
+ }
+ button.nav-overlay{
+    display: unset;
+ }
+ .overlay .closebutton {
+    display: unset;
+}
+}
