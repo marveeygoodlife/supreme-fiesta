@@ -271,7 +271,7 @@ footer { width: 100vw;
 div.search {padding: 5px;
     display: flex;
     flex-flow: row nowrap;
-    height: 50px;
+    height: 30px;
     width: 100%;
 }
 button#button {  
@@ -362,7 +362,7 @@ body {
     align-items: center;
     justify-content: space-evenly;
 }
-div #contact {
+div#contact {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
