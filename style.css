@@ -435,18 +435,18 @@ div.sectionimage {
     border-radius: unset;
     width: 100%;
  }
- #navbar {
+/*  #navbar {
     margin-top: 50rem;
-    display: flex  ;
+    display:    ;
     flex-direction: row
  }
  div.overlaycontent{
-    display: flex ;
+    display:   ;
  }
  button.nav-overlay{
-    display: unset;
+    display:  ;
  }
  .overlay .closebutton {
-    display: unset;
-}
+    display:  ;
+} */
 }
