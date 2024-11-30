@@ -74,29 +74,34 @@ div#navbar {
     flex-direction: row;
 }
 /* Nav overlay */
-#navbar {
+/* #navbar */ .overlay {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 100;
+    z-index: 1000;
     left: 0;
+    top:0;
   background-color: var(--accentcolor);
     background-color: rgba(0, 0, 0, 0.9);
     overflow-x: hidden;
-    transition: 0.5s;
+    display: block;
+    transition: 0.5s ease-in-out;
 }
 .overlaycontent {
-    position: relative;
-    top: 25%;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    margin :30px;
-}
+    position: relative;
+    height: 100%;
+      text-align: center;
+ }
 #navbar .overlaycontent  a {
     text-transform: uppercase;
     padding: 5px;
     text-decoration: none;
-    font-size:22px;
+    font-size:.8rem;
     color: var(--accentcolor);
 display: block;
 transition: 0.3s;
@@ -107,44 +112,30 @@ text-decoration: underline;
 }
 .overlay .closebutton {
     position: absolute;
-    top: 70px;
-    right: 45px;
-    font-size: 60px;
+    top: 20px;
+    right: 30px;
+    font-size: 24px;
     color: white;
 }
-.nav-overlay .bar {
-    width: 100%;
-    height: 2px;
-    border: none;
-    background-color:  var(--primarycolor);}
+
     .nav-overlay { 
-        position: relative;
-        display: flex;
-        flex-direction: column;
+        display: block;
+        z-index: 1100;
         width: 25px;
-        background-color:  initial;
-        justify-content: space-between;
+        background:  transparent;
+        font-size: 24px;
         height: 25px;
         cursor: pointer;
         border: none;
-        padding: 2px;
-    }
+     }
     div.headerp {
-        margin-top: 0;
-        box-sizing: border-box;
-        font-weight: 600;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: space-between;
-        color: white;
-        overflow: hidden;
-        padding: 10px;
+            text-align: center;
+        margin-top: 20px;
     }
     div.headerp p {
        font-weight: 900;
-       font-size: 1.4rem;
-        color:white;
+       font-size:.6rem;
+       color:white;
         opacity: 1;
     }
 /* HEADER STYLE END */
@@ -321,7 +312,11 @@ a.link:visited {
 /* FOOTER STYLE START END*/
 /* MEDIA QUERIES FOR TABLETS AND DESKTOPS */
 
-@media screen and (min-width:600px) and (max-width:1023px) {
+@media screen and (min-width:600px) and (max-width:1024px) {
+
+    #navbar {
+        display: block;
+    }
 body {
     font-size: 1.020rem;
 }
@@ -349,6 +344,67 @@ div#contact {
 }
 }
 @media screen and (min-width:1024px)  {
+  /* NAVBAR */
+  .overlay {
+    display: none;
+    width: auto;
+}
+
+/* Disable or hide toggle button */
+.nav-overlay {
+    display: none;
+}
+
+/* Optional: Add a horizontal nav bar for desktop */
+.headerp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+div.overlaycontent {
+    display: flex;
+    flex-direction: column; /* Make the nav links horizontal */
+    justify-content: center;
+    gap: 20px;
+}
+
+/* CHECKNAV BAR */
+
+#navbar .overlaycontent  a {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    padding: 5px;
+    text-decoration: none;
+    font-size:.8rem;
+    color: var(--accentcolor);
+z-index: 1200;
+transition: 0.3s;
+}
+
+.overlay .closebutton { 
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 24px;
+    color: white;
+}
+
+    .nav-overlay { 
+        display: none;
+        z-index: 1100;
+        width: 25px;
+        background:  transparent;
+        font-size: 24px;
+        height: 25px;
+        cursor: pointer;
+        border: none;
+     }
+  /* NAVBAR END*/
+
 body {
     font-size: 1.25rem;
 }
@@ -387,18 +443,21 @@ div.imageitem {
 flex-flow: row nowrap;}
 
 
-div.mybutton { display: block;
+div.mybutton { display: flex;
     flex-flow: unset;
-align-self:safe;
-justify-self:normal;
- 
+align-self:center;
+justify-content: center; 
 }
+
+/* header */
 #header {
     position: static;
     top: 0;
-    z-index: 100000;
-    width: 100vw;
+    margin-bottom: 15rem;
+     width: 100vw;
 }
+/* header */
+
 section.content { gap: unset;
     display: flex;
     flex-direction: row;
@@ -435,18 +494,5 @@ div.sectionimage {
     border-radius: unset;
     width: 100%;
  }
-/*  #navbar {
-    margin-top: 50rem;
-    display:    ;
-    flex-direction: row
- }
- div.overlaycontent{
-    display:   ;
- }
- button.nav-overlay{
-    display:  ;
- }
- .overlay .closebutton {
-    display:  ;
-} */
+
 }

@@ -20,36 +20,42 @@
 <body>
    <header id="mainheader">
     <div id="header"><h1>SHOP OUR MOST RECENT COLLECTION TODAY!</h1></div>
+
+    <!-- NAVIGATION -->
     <div id="navbar" class="overlay">
 <!-- toggle button to close overlay navigation -->
-<a href="#" class="closebutton" onclick="(closenav())"><span class="material-symbols-outlined">
+<a href="javascript:void(0)" class="closebutton" onclick="(closenav())"><span class="material-symbols-outlined">
     close_fullscreen
     </span></a>
 <!-- nav overlay content  -->
             <div class="overlaycontent">
+                <!-- NAVIGATIONS LINK -->
          <a href="about.html" class="navlink" target="_blank"><span class="material-symbols-outlined">
             contact_page
             </span>contact</a>
-         <a href="#" class="navlink">order</a>
+
+         <a href="#shopbtn" class="navlink"><span class="material-symbols-outlined">
+            store
+            </span>&nbsp;shop</a>
+
         <a href="#" class="navlink" target="_blank"><span class="material-symbols-outlined">
             contact_mail
-            </span>order</a>
+            </span>&nbsp;order</a>
+
         <a href="#" class="navlink" target="_blank">X</a>
         <a href="#" class="navlink" target="_blank"><span class="material-symbols-outlined">
             nest_protect
             </span>Instagram</a>
+
         <a href="#contact" class="navlink" target="_blank"><span class="material-symbols-outlined">
             contact_support
             </span>support</a>
         </div>
      </div>
 <!-- span to show overlay element -->
-<button class="nav-overlay" aria-labelled="Navigation toggle" onclick="openNav()"> <span class="material-symbols-outlined">
+<button class="nav-overlay" aria-label="Navigation toggle" onclick="openNav()"> <span class="material-symbols-outlined">
     menu_open
     </span>
-    <!-- <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span> -->
 </button>
      <div class="headerp"><p>Unique bracelet</p>
     <p>Delicate, ethereal designs crafted with nature's finest materials.</p></div>
@@ -91,10 +97,13 @@
         <P>$399</P>
     </figure></div>  
    
-</div> <div class="mybutton"> <a href="store.html" target="_blank">
-     <button type="button" class="btn"><span class="material-symbols-outlined">
-        shopping_cart
-        </span> SHOP NOW</button></a>
+</div> 
+<!-- shop now button -->
+ 
+<div id="shopbtn" class="mybutton"> <a href="store.html" target="_blank">
+     <button type="button" class="btn">SHOP NOW<span class="material-symbols-outlined mybutton">
+        add_shopping_cart
+        </span>&nbsp;</button></a>
 </div>
 <hr>
 <section class="content">
