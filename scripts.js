@@ -53,8 +53,6 @@ window.addEventListener("resize", () => {
     if (!isOverlayEnabled()) {
         document.getElementById("navbar").style.width = "0%"; // close overlay on large screen
     }
-    
-  
 });
 
 
