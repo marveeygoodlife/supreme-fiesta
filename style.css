@@ -73,7 +73,7 @@ div h1 {
 /* Nav overlay */
 /* #navbar */ .overlay {
     height: 100%;
-    width: 50%;
+    width: 70%;
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -89,7 +89,7 @@ div h1 {
       align-items: stretch;
      position: relative;
     height: 100%;
-    margin-top: 5rem;
+    margin-top: 10rem;
      width:100%;
     text-align: left;
  }
@@ -112,7 +112,7 @@ text-decoration: underline;
  }
 .overlay .closebutton {
     position: absolute;
-    top: 21px;
+    top: 3rem;
     right: 50px;
     font-size: 24px;
     color: black;
@@ -161,7 +161,7 @@ div.imageitem, .sectionimage {
     position: inherit;
     width: 50%;
     height: auto;
-    margin: 1rem 10px;
+    margin: 1rem auto;
 }
 .image {
     border-radius: 10px;
@@ -211,7 +211,7 @@ font-weight: 600;  }
     color: white;
     text-align: center;
     background-color: var(--primarycolor);
-    margin: 10rem 0 2rem 0;
+    margin: 2rem 0 2rem 0;
     border: none;
     font-size: 18px;
     font-weight: bold;
@@ -482,6 +482,8 @@ div.h2 h2 {
     font-size: 2.5rem;
 }
 .btn {
+    margin: 10rem 0 2rem 0;
+
     width: 320px;
     height: 90px;
     font-size: 1.2rem;
