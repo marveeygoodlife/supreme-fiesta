@@ -18,6 +18,7 @@
     <!-- google icon end -->
 </head>
 <body>
+    <!-- Header section -->
    <header id="mainheader">
     <div id="header"><h1>SHOP OUR MOST RECENT COLLECTION TODAY!</h1></div>
 
@@ -27,78 +28,85 @@
 <a href="javascript:void(0)" class="closebutton" onclick="(closenav())"><span class="material-symbols-outlined">
     close_fullscreen
     </span></a>
-<!-- nav overlay content  -->
-            <div class="overlaycontent">
-                <!-- NAVIGATIONS LINK -->
-         <a href="about.html" class="navlink" target="_blank"><span class="material-symbols-outlined">
-            contact_page
-            </span>contact</a>
+       <div id="overlaycontent" class="overlaycontent">
+            <!-- NAVIGATIONS LINK -->
+     <a href="about.html" class="navlink" target="_blank"><span class="material-symbols-outlined">
+        contact_page
+        </span>contact</a>
 
-         <a href="#shopbtn" class="navlink"><span class="material-symbols-outlined">
-            store
-            </span>&nbsp;shop</a>
+     <a href="#shopbtn" class="navlink"><span class="material-symbols-outlined">
+        store
+        </span>&nbsp;shop</a>
 
-        <a href="#" class="navlink" target="_blank"><span class="material-symbols-outlined">
-            contact_mail
-            </span>&nbsp;order</a>
+    <a href="#" class="navlink" target="_blank"><span class="material-symbols-outlined">
+        contact_mail
+        </span>&nbsp;order</a>
 
-        <a href="#" class="navlink" target="_blank">X</a>
-        <a href="#" class="navlink" target="_blank"><span class="material-symbols-outlined">
-            nest_protect
-            </span>Instagram</a>
+    <a href="#" class="navlink" target="_blank">Twitter (X)</a>
+    <a href="#" class="navlink" target="_blank"><span class="material-symbols-outlined">
+        nest_protect
+        </span>Instagram</a>
 
-        <a href="#contact" class="navlink" target="_blank"><span class="material-symbols-outlined">
-            contact_support
-            </span>support</a>
-        </div>
+    <a href="#contact" class="navlink" target="_blank"><span class="material-symbols-outlined">
+        contact_support
+        </span>support</a>
+    </div>
+
      </div>
-<!-- span to show overlay element -->
+
+<!-- open  overlay element -->
 <button class="nav-overlay" aria-label="Navigation toggle" onclick="openNav()"> <span class="material-symbols-outlined">
     menu_open
     </span>
 </button>
+
+<!-- Header paragraph 2 -->
      <div class="headerp"><p>Unique bracelet</p>
     <p>Delicate, ethereal designs crafted with nature's finest materials.</p></div>
    </header> 
+
+   <!-- Main section -->
    <main>
     <div class="maincontainer">
 <div class="h2"><h2>BEST SELLERS</h2>
 </div>    
-
+<!-- Image section -->
 <div class="imagecontainer">
     <div class="imageitem"> <figure>
-        <img src="images/cartier-1137401_640.jpg" alt="image" width="500" height="400"  class="image">
+        <img src="images/cartier-1137401_640.jpg" alt="image" width="500" height="400"  class="image show">
         <figcaption>Cartier</figcaption>
-        <P>$1300</P>
+        <P class="price">$1300</P>
     </figure></div>
     <div class="imageitem"> <figure>
-        <img src="images/diamond ring.jpg" alt="image" width="500" height="400"  class="image">
+        <img src="images/diamond ring.jpg" alt="image" width="500" height="400"  class="image show">
         <figcaption>Diamond ring</figcaption>
-        <P>$700</P>
+        <P class="price" >$700</P>
     </figure></div>
     <div class="imageitem"> <figure>
-        <img src="images/gold-1369453_640.jpg" alt="image" width="500" height="400"  class="image">
+        <img src="images/gold-1369453_640.jpg" alt="image" width="500" height="400"  class="image show">
         <figcaption>Gold jewelry</figcaption>
-        <P>$1110</P>
+        <P class="price" >$1110</P>
     </figure></div>
     <div class="imageitem">  <figure>
-        <img src="images/jewellery-2412842_640.jpg" alt="image" width="500" height="400" class="image">
+        <img src="images/jewellery-2412842_640.jpg" alt="image" width="500" height="400" class="image show">
         <figcaption>lorem</figcaption>
-        <P>$299</P>
+        <P class="price" >$299</P>
     </figure></div>
     <div class="imageitem"><figure>
-        <img src="images/pearlroses.jpg" alt="image" width="500" height="500" class="image">
+        <img src="images/pearlroses.jpg" alt="image" width="500" height="500" class="image show">
         <figcaption>Pearl roses</figcaption>
-        <P>$250</P>
+        <P class="price" >$250</P>
     </figure></div>
     <div class="imageitem"><figure>
-        <img src="images/rubypendant.jpg" alt="image" width="500" height="500" class="image">
+        <img src="images/rubypendant.jpg" alt="image" width="500" height="500" class="image show">
         <figcaption>Ruby pendant</figcaption>
-        <P>$399</P>
+        <P class="price" >$399</P>
     </figure></div>  
    
 </div> 
 <!-- shop now button -->
+ <br>
+ <br>
  
 <div id="shopbtn" class="mybutton"> <a href="store.html" target="_blank">
      <button type="button" class="btn">SHOP NOW<span class="material-symbols-outlined mybutton">
@@ -119,8 +127,11 @@
     <h3>FOLLOW US</h3>
     <p><em>@diamondjewel</em></p>
 </section>
+
+<div><button onclick="topFunction()" id="marvBtn" title="Go to top">Top</button>
+</div>
 <section class="imageflex">
-    <div class="imgflex" style="display: flex; flex-flow: row ;">
+    <div class="imgflex" style="display: flex; flex-flow: row ; justify-content: space-between;">
        <div> <img src="images/pexels-secret-garden-333350-2879829.jpg" alt="image1" width="300" height="300" class="fleximage" loading="lazy"></div>
        <div> <img src="images/pexels-cottonbro-4974496.jpg" alt="image2" width="300" height="300"  class="fleximage"  loading="lazy"></div>
        <div> <img src="images/pexels-solodsha-8105100.jpg" alt="image3" width="300" height="300" class="fleximage"  loading="lazy"></div>
@@ -136,28 +147,30 @@
     <div class="footer">
 <div class="left">
             <h3 style="text-align: center; margin: 1rem;">SUBSCRIBE</h3>
-            <P style="color: white; padding: 5px;">Be the first to know about new collections & exclusive offers.</P>
+            <P style="color: white; padding: 5px;" class="fsubscribe">Be the first to know about new collections & exclusive offers.</P>
+            <!-- Input section -->
     <div class="search">
-        <input type="email" name="email" id="email" placeholder="Type your email" class="myinput"  style="width: 180px; border: inherit;" autocomplete="email" autofocus required>
-        <button type="submit" id="button" style="width: 170px; border: inherit;"><span class="material-symbols-outlined">
+        <input type="email" name="email" id="email" placeholder="Type your email" class="myinput"  autocomplete="email" autofocus required>
+        <!-- Input button -->
+        <button type="submit" id="button"><span class="material-symbols-outlined">
             outgoing_mail
             </span>SUBSCRIBE</button>
     </div>
 </div>
 <div class="middle">
     <h3>CONTACT</h3>
-    <div><a href="#" class="link"><i class="fa-regular fa-address-card"></i>&nbsp;About</a></div>
+    <div><a href="#" class="link fl"><i class="fa-regular fa-address-card"></i>&nbsp;About</a></div>
 </div>
 <div class="right"><h3>PARTNERS</h3>
 
-    <div><a href="#" class="link"><i class="fa-brands fa-shopify"></i></a></div>
-    <div><a href="#" class="link"><i class="fa-brands fa-instagram"></i></a></div>
-    <div><a href="#" class="link">AliBaba</a></div>
+    <div><a href="#" class="link fl"><i class="fa-brands fa-shopify"></i>&nbsp;Shopify</a></div>
+    <div><a href="#" class="link fl"><i class="fa-brands fa-instagram"></i>&nbsp;Instagram</a></div>
+    <div><a href="#" class="link fl">&nbsp;AliBaba</a></div>
 </div>
 </div>
 <div class="devcontact" id="contact">
     <div>
-    <p style="color: white; padding: 5px; margin-left: 10px;">Designed by <a href="#" class="link">Marveey Goodlife</a>
+    <p style="color: white; padding: 5px; margin-left: 10px;">Designed by <a href="#" class="link fl">Marveey Goodlife</a>
     </p></div>
     <div>
     <p>&copy;&nbsp; <strong style="color: white; padding: 5px;">    All right reserved, 2024
