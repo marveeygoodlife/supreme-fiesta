@@ -4,7 +4,7 @@
  .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
-  'wght' 400,
+  'wght' 900,
   'GRAD' 0,
   'opsz' 24
 }
@@ -69,62 +69,63 @@ div#header {
 div h1 {
     font-size: .8rem;
 }
-div#navbar {
-    display: flex;
-    flex-direction: row;
-}
+
 /* Nav overlay */
 /* #navbar */ .overlay {
     height: 100%;
-    width: 0;
+    width: 70%;
     position: fixed;
     z-index: 1000;
     left: 0;
     top:0;
-  background-color: var(--accentcolor);
-    background-color: rgba(0, 0, 0, 0.9);
+     background-color:#6A9C89;
     overflow-x: hidden;
     display: block;
     transition: 0.5s ease-in-out;
-}
+ }
 .overlaycontent {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
+      align-items: stretch;
+     position: relative;
     height: 100%;
-      text-align: center;
+    margin-top: 10rem;
+     width:100%;
+    text-align: left;
  }
 #navbar .overlaycontent  a {
-    text-transform: uppercase;
-    padding: 5px;
+    padding: 15px;
+    background-color: rgba(255, 250, 250, 0.731);;
+    border-bottom: 1px solid seagreen;
     text-decoration: none;
     font-size:.8rem;
-    color: var(--accentcolor);
 display: block;
-transition: 0.3s;
+transition: 0.2s ease-in-out;
+color: black;
 }
-#navbar .overlaycontent  a:hover, #navbar .overlaycontent  a:focus {
-color: var(--secondarycolor);
+#navbar .overlaycontent  a:hover, #navbar .overlaycontent  a:focus { 
+    color: var(--primarycolor);
+    text-transform: uppercase;
+ scale: 1.025;
+ border-bottom: 1px solid seagreen;
 text-decoration: underline;
-}
+ }
 .overlay .closebutton {
     position: absolute;
-    top: 20px;
-    right: 30px;
+    top: 3rem;
+    right: 50px;
     font-size: 24px;
-    color: white;
+    color: black;
 }
-
+/* open overlay button */
     .nav-overlay { 
         display: block;
         z-index: 1100;
-        width: 25px;
+        width: 30px;
         background:  transparent;
-        font-size: 24px;
+        font-size: 30px;
         height: 25px;
+        padding: 10px;
         cursor: pointer;
         border: none;
      }
@@ -140,39 +141,54 @@ text-decoration: underline;
     }
 /* HEADER STYLE END */
 
-
-
-
 /* MAIN STYLE START */
 div.h2 {
     text-align: center;
-    margin: 3rem;
+    padding: 25px;
+    margin: 3rem auto;
+    background: linear-gradient(0.25turn,  #C4DAD2 25%, #c5dcd0 50%, #bdd4c9 75%,  #6A9C89 100%  );
 }
 /* Image style */
 img {
     display: block;
-    width: 100%;
+    max-width: 100%;
     height: auto;
-}
+ }
 div.imagecontainer {
     position: relative;
 }
 div.imageitem, .sectionimage {
     position: inherit;
-    max-width: 100%;
+    width: 50%;
     height: auto;
-    margin: 1rem 10px;
+    margin: 1rem auto;
 }
 .image {
     border-radius: 10px;
+    position: relative;
     position: inherit;
+    width: 100%;
+    height: 100%;
     border-bottom: 2px solid var(--accentcolor);
-    transition: transform 2s ease-in;
- }
+    transition:  2s ease-in;
+  }
+#image {
+    transition: none;
+    border-bottom: none;
+}
 
-.image:hover {
-   transform: translateY(5px);
- }
+.show:hover {
+    margin: 1.5rem;
+    left: 30;
+    right: 30;
+    transform: scale(1.25) ;
+   z-index: 10000;
+   position: relative;
+   max-width: 100%;
+   height: auto;
+
+}
+
  figcaption {
     text-transform: uppercase;
     padding-top: 10px;
@@ -186,20 +202,24 @@ font-weight: 600;  }
 .mybutton {
    text-align: center;
    display: block;
+   font-weight: bold;
 }
 .btn {
     height: 60px;
     width: 200px;
+    position: relative;
     color: white;
     text-align: center;
     background-color: var(--primarycolor);
-    margin: 1rem 0 2rem 0;
+    margin: 2rem 0 2rem 0;
     border: none;
     font-size: 18px;
+    font-weight: bold;
+    transition: 2s ease-in-out;
  }
 .btn:hover, .btn:focus {
     background-color:#1f5851d6;
-}
+translate: -5px;}
 /* button style end */
 hr {
     height: 2px;
@@ -247,6 +267,28 @@ section.imageflex{
 /* third section style end*/
 /* MAIN STYLE START END */
 
+/* scroll to top button */
+#marvBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 1000;
+    border: none;
+    outline: none;
+    background-color: #16423C;
+    color: white;
+    cursor: pointer;
+    padding: 16px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+#marvBtn {
+    background-color: #333;
+}
+
 /* FOOTER STYLE START */
 footer { width: 100vw;
     background-color: var(--primarycolor);
@@ -255,8 +297,7 @@ footer { width: 100vw;
 .footer {
     display: grid;
     grid-template-columns: 1fr;
-    place-items: center;
-}
+ }
 /* footer button and input  style */
 
 div.search {padding: 5px;
@@ -306,6 +347,9 @@ a.link:visited {
  footer h3 {
     margin: 1rem;
  }
+ #button, #email {
+    width: 180px; border: inherit;
+ }
  /* footer h3 style end */
 
 
@@ -344,18 +388,21 @@ div#contact {
 }
 }
 @media screen and (min-width:1024px)  {
-  /* NAVBAR */
-  .overlay {
-    display: none;
-    width: auto;
+    
+body {
+    font-size: 1.25rem;
+}
+/* Header */
+#header h1 {
+    font-size: 2.2rem;
 }
 
-/* Disable or hide toggle button */
-.nav-overlay {
-    display: none;
+#header {
+    position: static;
+    top: 0;
+    margin: 8rem 0 15rem ;
+     width: 100vw;
 }
-
-/* Optional: Add a horizontal nav bar for desktop */
 .headerp {
     display: flex;
     justify-content: space-between;
@@ -363,60 +410,89 @@ div#contact {
     padding: 0 20px;
 }
 
-div.overlaycontent {
+div.headerp p {
+    font-size: 2.1rem;
+}  
+    
+/* NAVBAR */
+.overlay {
+    height: auto;
+    width: 100%;
     display: flex;
-    flex-direction: column; /* Make the nav links horizontal */
-    justify-content: center;
-    gap: 20px;
-}
+    }
 
-/* CHECKNAV BAR */
 
+.overlaycontent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-end;
+    position: relative;
+    height: 100%;
+    width:100%;
+    padding: 30px;
+    margin-top: 0%;
+  }
 #navbar .overlaycontent  a {
-    display: flex;
-    flex-direction: column;
-    text-transform: uppercase;
-    padding: 5px;
-    text-decoration: none;
-    font-size:.8rem;
-    color: var(--accentcolor);
-z-index: 1200;
-transition: 0.3s;
-}
+    padding: 15px;
+    font-size:1.2rem;
+display: inline-block;
+ }
 
+/* disable toggle buttons and overlay */
+.nav-overlay {
+    display: none;
+}
 .overlay .closebutton { 
     display: none;
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 24px;
-    color: white;
 }
+/* NAVBAR END*/
 
-    .nav-overlay { 
-        display: none;
-        z-index: 1100;
-        width: 25px;
-        background:  transparent;
-        font-size: 24px;
-        height: 25px;
-        cursor: pointer;
-        border: none;
-     }
-  /* NAVBAR END*/
-
-body {
-    font-size: 1.25rem;
-}
- 
-#header h1 {
-    font-size: 1.1rem;
-}
-.footer {
+/* Image style */
+div.imageitem {
+     max-width: 100%;
+     flex: 1 1 auto;
+  }
+  #image {
+    position: relative;
+    top: 0;
+    height: 500px;
+    border-radius: unset;
+    width: 100%;
+ }
+.imagecontainer  {
     display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: space-evenly;
+flex-flow: row nowrap;}
+
+div.sectionimage {
+    height: fit-content;
+    position: relative;
+    padding: 0;
+    margin: 0;
+ }
+div.mybutton { display: flex;
+    flex-flow: unset;
+align-self:center;
+justify-content: center; 
+}
+
+/* sctions */
+div.h2 h2 {
+    font-size: 2.5rem;
+}
+.btn {
+    margin: 10rem 0 2rem 0;
+
+    width: 320px;
+    height: 90px;
+    font-size: 1.2rem;
+}
+figcaption {
+    font-size: 1.5rem;
+}
+.price {
+    font-size: 1.4rem;
 }
 div#contact {
     display: flex;
@@ -424,40 +500,9 @@ div#contact {
     justify-content: space-evenly;
     flex-direction: row;
     margin-top: 4rem;
-    padding: 0;
+     padding: 0;
     box-sizing: border-box;
 }
-footer h3{
-    margin: 0;
-    padding: 0;
-}
-div.headerp p {
-    font-size: 1.1rem;
-}
-div.imageitem {
-     max-width: 100%;
-     flex: 1 1 auto;
-  }
-.imagecontainer  {
-    display: flex;
-flex-flow: row nowrap;}
-
-
-div.mybutton { display: flex;
-    flex-flow: unset;
-align-self:center;
-justify-content: center; 
-}
-
-/* header */
-#header {
-    position: static;
-    top: 0;
-    margin-bottom: 15rem;
-     width: 100vw;
-}
-/* header */
-
 section.content { gap: unset;
     display: flex;
     flex-direction: row;
@@ -477,22 +522,52 @@ div.contenttext {
    background-color:#C4DAD2;
    height: 499px; text-align: center;
 }
-div.sectionimage {
-    height: fit-content;
-    position: relative;
-    padding: 0;
-    margin: 0;
- }
+h2.contexth2 {
+    font-size: 3rem;
+    margin-top: 3rem;
+}
  p.contentp {
     padding: 35px;
+    font-size: 1.5rem;
     text-align: left;
  }
- #image {
-    position: relative;
-    top: 0;
-    height: 500px;
-    border-radius: unset;
-    width: 100%;
+ .social h3 {
+    font-size: 2rem;
+ }
+ .social p {
+    font-size: 1.4rem;
+ }
+ /* footer style */
+.footer {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: baseline;
+    justify-content: space-evenly;
+}
+a.fl {
+    font-size: 1.5rem;
+    margin:2rem 0;
  }
 
+.fsubscribe {
+    font-size: 1.5rem;
 }
+footer h3{ 
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    padding: 0;
+}
+button#button {
+    width: 200px;
+}
+div.search {
+    height: 70px;}
+
+    button#button {
+        width: 300px; border: inherit;
+     }
+     #email {
+        width: 350px;
+     }
+}
+

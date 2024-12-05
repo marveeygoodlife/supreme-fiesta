@@ -1,20 +1,9 @@
- // function to listen for the large screen size
 
-function isOverlayEnabled() {
-    const width = window.innerWidth;
-    return width < 1024; //enable overlay for screens smaller than 1024px
-}
-// function to open nav overlay
 function openNav() {
 
-
-    if (isOverlayEnabled()) {
-        document.getElementById("navbar").style.width = "100%";
-        document.body.style.overflow = "hidden"; // stop user from scrolling the background when the overlay is active
-    
-    }
-  
-}
+    document.getElementById("navbar").style.width = "100%";
+    document.body.style.overflow = "hidden"; // stop user from scrolling the background when the overlay is active
+   }
 // function to close overlay
 
 function closenav() {
@@ -39,77 +28,21 @@ closenav();
 
 });
 
-//listen for window resize to enable / disable overlay
+// Button to scroll to top
 
-window.addEventListener("resize", () => {
-
-
-    const navOverlayButton = document.querySelector(".nav-overlay");
-    if (window.innerWidth >= 1024) {
-        navOverlayButton.style.display = "none"; // Hide the button for desktop
-    } else {
-        navOverlayButton.style.display = "block"; // Show the button for smaller screens
-    }
-    if (!isOverlayEnabled()) {
-        document.getElementById("navbar").style.width = "0%"; // close overlay on large screen
-    }
-});
-
-
-
-
-/* 
-g
-    // Function to check if overlay should be enabled based on screen size
-function isOverlayEnabled() {
-    const width = window.innerWidth;
-    return width < 1024; // Enable overlay for screens smaller than 1024px
+const scrolltop = document.getElementById("marvBtn");
+// show button when user scroll down 30px from top of document
+window.onscroll = function() {
+    scrollFunction()
+};
+function scrollFunction() {
+    if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+     scrolltop.style.display ="block";   } else {
+        scrolltop.style.display = "none";
+     }
 }
-
-// Function to open the navigation overlay
-function openNav() {
-    if (isOverlayEnabled()) {
-        const navbar = document.getElementById("navbar");
-        navbar.style.width = "100%"; // Expand overlay to full screen
-        document.body.style.overflow = "hidden"; // Prevent background scrolling
-    }
+// scroll top on click of button 
+function topFunction() {
+    document.body.scrollTop = 0; // for safari
+    document.documentElement.scrollTop = 0; // other browsers
 }
-
-// Function to close the navigation overlay
-function closenav() {
-    const navbar = document.getElementById("navbar");
-    navbar.style.width = "0%"; // Collapse overlay
-    document.body.style.overflow = ""; // Re-enable background scrolling
-}
-
-// Add event listeners to navigation links
-const navLinks = document.querySelectorAll(".navlink");
-navLinks.forEach(link => {
-    link.addEventListener("click", (e) => {
-        e.preventDefault(); // Prevent default link behavior
-        const targetID = link.getAttribute("href").substring(1); // Extract section ID
-        const targetSection = document.getElementById(targetID);
-
-        // Scroll smoothly to the target section if it exists
-        if (targetSection) {
-            targetSection.scrollIntoView({ behavior: "smooth" });
-        }
-
-        // Close the overlay after navigation
-        closenav();
-    });
-});
-
-// Listen for window resize to manage overlay visibility and toggle button
-window.addEventListener("resize", () => {
-    const navOverlayButton = document.querySelector(".nav-overlay");
-    const navbar = document.getElementById("navbar");
-
-    if (window.innerWidth >= 1024) {
-        navOverlayButton.style.display = "none"; // Hide toggle button on desktop
-        navbar.style.width = "0%"; // Ensure overlay is closed on large screens
-    } else {
-        navOverlayButton.style.display = "block"; // Show toggle button on smaller screens
-    }
-});
- */
