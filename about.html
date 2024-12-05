@@ -8,22 +8,72 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="keywords" content="jewellries ecommerce shop cheap">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
    <title> About page</title>
 </head>
 <body>
     <header id="mainheader">
-        <h1> About us</h1>
+        <h1> Welcome to <strong>Eterna Luxe</strong></h1>
            <header id="header">
-       <div><a href="index.html">Home</a></div>
+       <div><a href="index.html" class="navlink link" style="font-size: 2rem; color: black;">Home</a></div>
     </header>
     </header>
     <body>
-        <main>
-            <section>
-                <p>Loren </p>
+        <main id="about-container">
+            <section class="welcome-section">
+                <p>At Eterna Luxe, we believe that jewelry is more than just an accessory—it’s a statement of elegance, a symbol of love, and a mark of individuality.  </p>
+                <p>Our curated collections are crafted to celebrate your unique story, blending timeless craftsmanship with modern sophistication.</p>
             </section>
+            <section class="list-items">
+                <h2>Why Choose Us?
+                </h2>
+                <ul>
+                    <li><strong>Exquisite Craftsmanship:&nbsp;</strong>Every piece is meticulously designed to perfection.</li>
+                    <li><strong>Premium Quality:&nbsp;</strong>Using only the finest materials, from sparkling diamonds to lustrous gold.</li>
+                    <li><strong>Unique Designs: &nbsp;</strong>Stand out with one-of-a-kind jewelry that reflects your personal style.</li>
+                    <li><strong>Exceptional Service: &nbsp;</strong>From custom designs to expert guidance, we’re here to make your experience unforgettable.</li>
+                </ul>
+                <h2>Our collections</h2>
+                <li><strong>Golden Elegance:&nbsp;</strong>From classic to contemporary, our gold pieces are a treasure to behold.</li>
+                <li><strong>Custom Creations: &nbsp;</strong>Have a design in mind? Let us bring your vision to life with our bespoke jewelry services.</li>
+                <li><strong>Bridal Bliss:&nbsp;</strong>Discover engagement rings and wedding bands that symbolize forever.</li>
+                <li><strong>Eternal Diamonds:&nbsp;</strong> Celebrate life's precious moments with our brilliant diamond jewelry</li>
+            </section>
+            <section class="connection">
+                <h3>Let’s Sparkle Together!
+                </h3>
+                <p>Visit our store or browse our online collection to find the perfect piece that speaks to you. </p>
+                <p>Whether it’s a gift for a loved one or a treat for yourself, Eterna Luxe promises jewelry that lasts a lifetime.</p>
+                <div class="sparkle"><h4>Discover Your Sparkle Today!
+
+                </h4>
+            <ul><li>Visit us in-store or online:&nbsp;<a href="https://marveeygoodlife.github.io/supreme-fiesta/">eternaluxe</a></li>
+            </ul>
+            <li>Follow us for the latest designs and exclusive offers: [Instagram/Facebook handle]</li>
+            </div>
+            </section>
+            <div><p><strong>✨ Eterna Luxe—Where Timeless Beauty Meets Modern Glamour ✨</strong></p></div>
+            <div><button onclick="topFunc()" id="marBtn" title="Go to top">Top</button>
+            </div>
         </main>
     </body>
     <footer></footer>
+    <script>
+        const scrolltop = document.getElementById("marBtn");
+        // show button when user scroll down 30px from top of document
+        window.onscroll = function() {
+            scrollFunction()
+        };
+        function scrollFunction() {
+            if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+             scrolltop.style.display ="block";   } else {
+                scrolltop.style.display = "none";
+             }
+        }
+        // scroll top on click of button 
+        function topFunc() {
+            document.body.scrollTop = 0; // for safari
+            document.documentElement.scrollTop = 0; // other browsers
+        }</script>
 </body>
 </html>
