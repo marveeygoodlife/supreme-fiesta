@@ -67,7 +67,7 @@ div#header {
     justify-content: center;
 }
 div h1 {
-    font-size: .8rem;
+    font-size: 1rem;
 }
 
 /* Nav overlay */
@@ -92,13 +92,14 @@ div h1 {
     margin-top: 10rem;
      width:100%;
     text-align: left;
+    justify-content: baseline;
  }
 #navbar .overlaycontent  a {
     padding: 15px;
     background-color: rgba(255, 250, 250, 0.731);;
     border-bottom: 1px solid seagreen;
     text-decoration: none;
-    font-size:.8rem;
+    font-size:1rem;
 display: block;
 transition: 0.2s ease-in-out;
 color: black;
@@ -113,8 +114,8 @@ text-decoration: underline;
 .overlay .closebutton {
     position: absolute;
     top: 3rem;
-    right: 50px;
-    font-size: 24px;
+    left: 7rem;
+     font-size: 24px;
     color: black;
 }
 /* open overlay button */
@@ -268,7 +269,7 @@ section.imageflex{
 /* MAIN STYLE START END */
 
 /* scroll to top button */
-#marvBtn {
+#marvBtn, #marBtn {
     display: none;
     position: fixed;
     bottom: 20px;
@@ -285,7 +286,7 @@ section.imageflex{
     font-weight: bolder;
 }
 
-#marvBtn {
+#marvBtn, #marBtn {
     background-color: #333;
 }
 
@@ -354,9 +355,27 @@ a.link:visited {
 
 
 /* FOOTER STYLE START END*/
+
+/* ABOUT PAGE STYLE */
+#about-container {
+    padding: 20px;
+    margin: 2rem auto;
+    text-align: left;
+    font-size: 1.4rem;
+    line-height: 2;
+}
+#about-container section p {
+    padding: 20px;
+}
+#about-container section h2, h3,h4 {
+    margin: 1rem auto;
+}
+#about-container section ul {
+    padding: 20px;
+}
 /* MEDIA QUERIES FOR TABLETS AND DESKTOPS */
 
-@media screen and (min-width:600px) and (max-width:1024px) {
+@media screen and (min-width:600px) and (max-width:1023px) {
 
     #navbar {
         display: block;
@@ -372,10 +391,9 @@ div.headerp p { color: red;
 }
 .footer {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap  ;
     grid-template-columns: repeat(2, 1fr);
-    place-items: center;
-    font-size: 1.015;
+     font-size: 1.015;
 }
 div#contact {
     display: flex;
@@ -394,13 +412,14 @@ body {
 }
 /* Header */
 #header h1 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
 }
 
 #header {
     position: static;
     top: 0;
-    margin: 8rem 0 15rem ;
+    padding: 15px;
+    margin: 10rem 0 15rem ;
      width: 100vw;
 }
 .headerp {
@@ -435,8 +454,8 @@ div.headerp p {
     margin-top: 0%;
   }
 #navbar .overlaycontent  a {
-    padding: 15px;
-    font-size:1.2rem;
+    padding: 30px;
+    font-size:1.5rem;
 display: inline-block;
  }
 
@@ -452,25 +471,16 @@ display: inline-block;
 /* Image style */
 div.imageitem {
      max-width: 100%;
-     flex: 1 1 auto;
-  }
-  #image {
-    position: relative;
-    top: 0;
-    height: 500px;
-    border-radius: unset;
-    width: 100%;
- }
+   }
+  
 .imagecontainer  {
     display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-around;
 flex-flow: row nowrap;}
 
-div.sectionimage {
-    height: fit-content;
-    position: relative;
-    padding: 0;
-    margin: 0;
- }
+
 div.mybutton { display: flex;
     flex-flow: unset;
 align-self:center;
@@ -494,15 +504,25 @@ figcaption {
 .price {
     font-size: 1.4rem;
 }
-div#contact {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: row;
-    margin-top: 4rem;
-     padding: 0;
-    box-sizing: border-box;
-}
+
+
+/* company goals section style*/
+/* goals image */
+div.sectionimage {
+    height: 50%;
+    position: relative;
+    padding: 0;
+    margin: 0;
+ }
+#image {
+    position: relative;
+    top: 0;
+    height: auto;
+    border-radius: unset;
+    width: 100%;
+    height: 600px; 
+
+ }
 section.content { gap: unset;
     display: flex;
     flex-direction: row;
@@ -516,26 +536,28 @@ section.content { gap: unset;
 }
 div.contenttext {
    width: 50%;
-   padding: 0;
-    margin: 0;
-   height: auto;
-   background-color:#C4DAD2;
-   height: 499px; text-align: center;
+   padding: 20px;
+    margin: 2rem auto;
+    background-color:#C4DAD2;
+   height: 559px; 
+   text-align: center;
 }
 h2.contexth2 {
     font-size: 3rem;
-    margin-top: 3rem;
+    margin-top: 3rem auto;
 }
  p.contentp {
     padding: 35px;
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-align: left;
  }
+
+ /* follow us section */
  .social h3 {
-    font-size: 2rem;
+    font-size: 3rem;
  }
  .social p {
-    font-size: 1.4rem;
+    font-size: 1.7rem;
  }
  /* footer style */
 .footer {
@@ -559,6 +581,15 @@ footer h3{
 }
 button#button {
     width: 200px;
+}
+div#contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    margin: 4rem auto;
+     padding: 0;
+    box-sizing: border-box;
 }
 div.search {
     height: 70px;}
