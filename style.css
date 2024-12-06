@@ -114,9 +114,9 @@ text-decoration: underline;
 .overlay .closebutton {
     position: absolute;
     top: 3rem;
-    left: 7rem;
-     font-size: 24px;
-    color: black;
+    right: 100px;
+    font-size: 24px;
+    color: white;
 }
 /* open overlay button */
     .nav-overlay { 
@@ -277,17 +277,18 @@ section.imageflex{
     z-index: 1000;
     border: none;
     outline: none;
-    background-color: #16423C;
+    background-color: #6a9e97;
     color: white;
     cursor: pointer;
-    padding: 16px;
+    padding: 5px;
     border-radius: 10px;
     font-size: 18px;
-    font-weight: bolder;
+    transition: 2s ease-in;
 }
 
-#marvBtn, #marBtn {
+#marvBtn, #marBtn:hover {
     background-color: #333;
+translate:5px 5px;
 }
 
 /* FOOTER STYLE START */
@@ -373,6 +374,9 @@ a.link:visited {
 #about-container section ul {
     padding: 20px;
 }
+div.mygrid {
+    display: unset;
+}
 /* MEDIA QUERIES FOR TABLETS AND DESKTOPS */
 
 @media screen and (min-width:600px) and (max-width:1023px) {
@@ -380,21 +384,22 @@ a.link:visited {
     #navbar {
         display: block;
     }
+  
 body {
     font-size: 1.020rem;
 }
 #header h1 {
     font-size: 1.025rem;
 }
-div.headerp p { color: red;
-    font-size: 1.001rem;
+div.headerp p { 
+    font-size: 1.09rem;
 }
 .footer {
-    display: flex;
-    flex-flow: row wrap  ;
-    grid-template-columns: repeat(2, 1fr);
+   
      font-size: 1.015;
 }
+
+
 div#contact {
     display: flex;
     align-items: center;
@@ -406,7 +411,10 @@ div#contact {
 }
 }
 @media screen and (min-width:1024px)  {
-    
+  .footer {
+        display: flex;
+    flex-flow: row nowrap;
+    }
 body {
     font-size: 1.25rem;
 }
@@ -560,7 +568,7 @@ h2.contexth2 {
     font-size: 1.7rem;
  }
  /* footer style */
-.footer {
+footer div.footer {
     display: flex;
     flex-flow: row nowrap;
     align-items: baseline;
