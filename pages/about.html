@@ -8,18 +8,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="keywords" content="jewellries ecommerce shop cheap">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
    <title> Eterna Luxe |About page</title>
 </head>
 <body>
     <header id="mainheader">
-        <h1> Welcome to <strong>Eterna Luxe</strong></h1>
            <header id="header">
-       <div><a href="index.html" class="navlink link" style="font-size: 2rem; color: black;">Home</a></div>
+       <div><a href="/index.html" class="navlink link" style="font-size: 2rem; color: black;">Home</a></div>
     </header>
     </header>
     <body>
         <main id="about-container">
+<div class="abouth1">            <h1> Welcome to <strong>Eterna Luxe</strong></h1>
+</div>
             <section class="welcome-section">
                 <p>At Eterna Luxe, we believe that jewelry is more than just an accessory—it’s a statement of elegance, a symbol of love, and a mark of individuality.  </p>
                 <p>Our curated collections are crafted to celebrate your unique story, blending timeless craftsmanship with modern sophistication.</p>
@@ -27,17 +28,18 @@
             <section class="list-items">
                 <h2>Why Choose Us?
                 </h2>
-                <ul>
+                <ul class="ul">
                     <li><strong>Exquisite Craftsmanship:&nbsp;</strong>Every piece is meticulously designed to perfection.</li>
                     <li><strong>Premium Quality:&nbsp;</strong>Using only the finest materials, from sparkling diamonds to lustrous gold.</li>
                     <li><strong>Unique Designs: &nbsp;</strong>Stand out with one-of-a-kind jewelry that reflects your personal style.</li>
                     <li><strong>Exceptional Service: &nbsp;</strong>From custom designs to expert guidance, we’re here to make your experience unforgettable.</li>
                 </ul>
                 <h2>Our collections</h2>
+                <ul class="ul">
                 <li><strong>Golden Elegance:&nbsp;</strong>From classic to contemporary, our gold pieces are a treasure to behold.</li>
                 <li><strong>Custom Creations: &nbsp;</strong>Have a design in mind? Let us bring your vision to life with our bespoke jewelry services.</li>
                 <li><strong>Bridal Bliss:&nbsp;</strong>Discover engagement rings and wedding bands that symbolize forever.</li>
-                <li><strong>Eternal Diamonds:&nbsp;</strong> Celebrate life's precious moments with our brilliant diamond jewelry</li>
+                <li><strong>Eternal Diamonds:&nbsp;</strong> Celebrate life's precious moments with our brilliant diamond jewelry</li></ul>
             </section>
             <section class="connection">
                 <h3>Let’s Sparkle Together!
@@ -47,17 +49,23 @@
                 <div class="sparkle"><h4>Discover Your Sparkle Today!
 
                 </h4>
-            <ul><li>Visit us in-store or online:&nbsp;<a href="https://marveeygoodlife.github.io/supreme-fiesta/">eternaluxe</a></li>
-            </ul>
-            <li>Follow us for the latest designs and exclusive offers: [Instagram/Facebook handle]</li>
+            <ul class="ul"><li>Visit us in-store or online:&nbsp;<a href="https://marveeygoodlife.github.io/supreme-fiesta/" class="aboutlink">eterna luxe</a></li>
+            
+            <li>Follow us for the latest designs and exclusive offers: [Instagram/Facebook handle]</li></ul>
             </div>
             </section>
-            <div><p><strong>✨ Eterna Luxe—Where Timeless Beauty Meets Modern Glamour ✨</strong></p></div>
-            <div><button onclick="topFunc()" id="marBtn" title="Go to top">Top</button>
-            </div>
+            <div style="margin-top: 1.2rem;"><p><strong><em>✨ Eterna Luxe—Where Timeless Beauty Meets Modern Glamour ✨</em></strong></p></div>
+            <!-- scrol to top button -->
+<div><button onclick="topFunc()" id="marvBtn" title="Go to top"><span class="material-symbols-outlined">
+    arrow_upward
+    </span></button>
+</div>
         </main>
     </body>
-    <footer></footer>
+    <footer> <div  id="contact">
+        <p style="color: white;">&copy;&nbsp; <strong style="color: white; padding: 5px;">    All right reserved, 2024
+        </strong>
+        </p></div></footer>
     <script>
         const scrolltop = document.getElementById("marBtn");
         // show button when user scroll down 30px from top of document
@@ -75,5 +83,7 @@
             document.body.scrollTop = 0; // for safari
             document.documentElement.scrollTop = 0; // other browsers
         }</script>
+           <script src="https://kit.fontawesome.com/184a11b74d.js" crossorigin="anonymous"></script>
+
 </body>
 </html>

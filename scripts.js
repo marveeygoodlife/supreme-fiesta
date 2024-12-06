@@ -17,7 +17,7 @@ function closenav() {
 const navLinks = document.querySelectorAll(".navlink");
 navLinks.forEach(link => {
     link.addEventListener("click", (e) => {
-        e.preventDefault(); //prevent default link behaviour
+       // e.preventDefault(); //prevent default link behaviour
         const  targetID  = link.getAttribute("href").substring(1);// get section id from the link href attribute
         const targetSection = document.getElementById(targetID);
         // smoothly scroll to target section 

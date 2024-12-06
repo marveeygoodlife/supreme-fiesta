@@ -277,7 +277,7 @@ section.imageflex{
     z-index: 1000;
     border: none;
     outline: none;
-    background-color: #6a9e97;
+    background-color:#16423C;
     color: white;
     cursor: pointer;
     padding: 5px;
@@ -359,24 +359,46 @@ a.link:visited {
 
 /* ABOUT PAGE STYLE */
 #about-container {
-    padding: 20px;
+    padding: 10px;
     margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: left;
-    font-size: 1.4rem;
+    font-size: 1rem;
     line-height: 2;
 }
 #about-container section p {
-    padding: 20px;
+    padding: 10px;
+    display: block;
 }
-#about-container section h2, h3,h4 {
+div.abouth1 h1{
+    font-size: 1.4rem;
+    text-align: center;
     margin: 1rem auto;
 }
+#about-container section  h2, h3,h4 {
+    margin: 1rem auto;
+    font-size: 1.2rem;
+}
 #about-container section ul {
-    padding: 20px;
-}
-div.mygrid {
-    display: unset;
-}
+ margin-left: 2rem;
+ }
+
+
+a.aboutlink {
+    color:#16423C;
+text-decoration: none;}
+a.aboutlink:hover {
+text-decoration: underline;
+color: #16423C;}
+a.aboutlink:visited {
+color: #16423C;}
+
+
+
+
 /* MEDIA QUERIES FOR TABLETS AND DESKTOPS */
 
 @media screen and (min-width:600px) and (max-width:1023px) {
@@ -608,5 +630,32 @@ div.search {
      #email {
         width: 350px;
      }
+/* ABOUT PAGE STYLE */
+#about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+#about-container   p {
+    padding: 10px;
+    display: block;
+    font-size: 2rem;
+}
+div.abouth1 h1{
+    font-size: 4rem;
+    text-align: center;
+    margin: 1rem auto;
+}
+#about-container section  h2, h3,h4 {
+    margin: 1rem auto;
+    font-size: 3rem;
+}
+#about-container section ul {
+ margin-left: 2rem;
+ }
+#about-container section ul li {
+    font-size: 1.6rem;
+ }
+    }
 
