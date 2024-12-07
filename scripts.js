@@ -31,12 +31,12 @@ closenav();
 // Button to scroll to top
 
 const scrolltop = document.getElementById("marvBtn");
-// show button when user scroll down 30px from top of document
+// show button when user scroll down 100px from top of document
 window.onscroll = function() {
     scrollFunction()
 };
 function scrollFunction() {
-    if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
      scrolltop.style.display ="block";   } else {
         scrolltop.style.display = "none";
      }
