@@ -12,16 +12,48 @@
    <title> Eterna Luxe | store page</title>
 </head>
 <body>
-    <header id="mainheader">
-           <header id="header">
-       <div><a href="/index.html" class="navlink link" style="font-size: 2rem; color: black;">Home</a></div>
-    </header>
-    </header>
+    <!-- Header section -->
+  <header class="mainheader">
+   <div class="header"><h1>SHOP OUR MOST RECENT COLLECTION TODAY!</h1></div>
+
+   <!-- NAVIGATION -->
+   <div id="storenav" class="overlay">
+<!-- toggle button to close overlay navigation -->
+<a href="javascript:void(0)" class="closebutton" onclick="(Closenav())"><span class="material-symbols-outlined">
+   close_fullscreen
+   </span></a>
+<!-- nav overlay content  -->
+<div  class="overlaycontent">
+
+           <!-- NAVIGATIONS LINK -->
+    <a href="/index.html" class="navlink" target="_blank"><span class="material-symbols-outlined">
+       contact_page
+       </span>&nbsp;Home</a>
+
+   <a href="#offer" class="navlink" target="_blank"><span class="material-symbols-outlined">
+       contact_mail
+       </span>&nbsp;Collection</a>
+
+   <a href="#contact-uS" class="navlink" target="_blank"><span class="material-symbols-outlined">
+       nest_protect
+       </span>&nbsp;Contact</a>
+   </div>
+    </div>
+
+<!-- open  overlay element -->
+<button class="nav-overlay" aria-label="Navigation toggle" onclick="Opennav()"> <span class="material-symbols-outlined">
+   menu_open
+   </span>
+</button>
+<!-- Header paragraph 2 -->
+    <div class="headerp"><p>Unique bracelet</p>
+   <p>Delicate, ethereal designs crafted with nature's finest materials.</p></div>
+  </header> 
     <body>
         <main id="about-container">
 <div class="abouth1">            <h1> Welcome to <strong>Eterna Luxe Store</strong></h1>
 </div>
-            <section class="welcome-section">
+            <section class="welcome-section" id="offer">
                 <p>Step into a world of elegance and sophistication at Eterna Luxe, your ultimate destination for timeless jewelry. </p>
                 <p>Our store is more than just a shopping space—it’s a haven where craftsmanship meets passion, and every piece tells a story. </p>
             </section>
@@ -38,7 +70,7 @@
                     <li><strong>💍 Custom Creations:&nbsp;</strong>Turn your vision into reality with our bespoke jewelry services. Whether it’s an engagement ring or a unique pendant, we bring your dream designs to life.</li>
                 </ul>
                 <hr>
-                <section class="visit-us storeli"></section>
+                <section class="visit-us storeli" id="contact-uS"></section>
                 <h2><strong>Visit Us Today!</strong></h2>
                 <ul class="ul">
                 <li><strong>📍 Store Location:&nbsp;</strong><br>  <address>Shop 6b, Ed plaza, Ontaro.</address>
@@ -71,7 +103,7 @@
         </main>
     </body>
     <footer> 
-        <div class="middle" id="contact-us">
+        <div class="middle">
             <div>
             <div><h3>CONTACT</h3></div>
         
@@ -116,7 +148,42 @@ function topFunc() {
         document.body.scrollTop = 0; // for safari
         document.documentElement.scrollTop = 0; // other browsers
     }
-        </script>
+     
+    
+        // function for overlay
+        function Opennav() {
+
+document.getElementById("storenav").style.width = "100%";
+
+document.body.style.overflow = "hidden"; // stop user from scrolling the background when the overlay is active
+}
+// function to close overlay
+
+function Closenav() {
+document.getElementById("storenav").style.width = "0%";
+document.body.style.overflow = ""; // Re-enable background scrolling
+
+}
+
+// ADD event listener to the navlinks
+
+const navLinks = document.querySelectorAll(".navlink");
+navLinks.forEach(link => {
+    link.addEventListener("click", (e) => {
+       // e.preventDefault(); //prevent default link behaviour
+        const  targetID  = link.getAttribute("href").substring(1);// get section id from the link href attribute
+        const targetSection = document.getElementById(targetID);
+        // smoothly scroll to target section 
+        targetSection.scrollIntoView({behavior: "smooth"});
+Closenav();
+
+    });
+
+});
+
+        
+     </script>
+        
            <script src="https://kit.fontawesome.com/184a11b74d.js" crossorigin="anonymous"></script>
 
 </body>

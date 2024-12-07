@@ -1,13 +1,12 @@
+function openNav() {
 
-function opennav() {
-
-    document.getElementById("indexnav").style.width = "100%";
+    document.getElementById("navbar").style.width = "100%";
     document.body.style.overflow = "hidden"; // stop user from scrolling the background when the overlay is active
    }
 // function to close overlay
 
 function closenav() {
-    document.getElementById("indexnav").style.width = "0%";
+    document.getElementById("navbar").style.width = "0%";
     document.body.style.overflow = ""; // Re-enable background scrolling
 
 }
@@ -27,22 +26,3 @@ closenav();
     });
 
 });
-
-// Button to scroll to top
-
-const scrolltop = document.getElementById("marvBtn");
-// show button when user scroll down 30px from top of document
-window.onscroll = function() {
-    scrollFunction()
-};
-function scrollFunction() {
-    if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
-     scrolltop.style.display ="block";   } else {
-        scrolltop.style.display = "none";
-     }
-}
-// scroll top on click of button 
-function topFunction() {
-    document.body.scrollTop = 0; // for safari
-    document.documentElement.scrollTop = 0; // other browsers
-}

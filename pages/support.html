@@ -12,11 +12,43 @@
    <title> Eterna Luxe | support center</title>
 </head>
 <body>
-    <header id="mainheader">
-           <header id="header">
-       <div><a href="/index.html" class="navlink link" style="font-size: 2rem; color: black;">Home</a></div>
-    </header>
-    </header>
+    <!-- Header section -->
+  <header class="mainheader">
+   <div class="header"><h1>SHOP OUR MOST RECENT COLLECTION TODAY!</h1></div>
+
+   <!-- NAVIGATION -->
+   <div id="supportnav" class="overlay">
+<!-- toggle button to close overlay navigation -->
+<a href="javascript:void(0)" class="closebutton" onclick="(closeNaV())"><span class="material-symbols-outlined">
+   close_fullscreen
+   </span></a>
+<!-- nav overlay content  -->
+<div  class="overlaycontent">
+
+           <!-- NAVIGATIONS LINK -->
+    <a href="/index.html" class="navlink" target="_blank"><span class="material-symbols-outlined">
+       contact_page
+       </span>&nbsp;Home</a>
+
+   <a href="#order" class="navlink" ><span class="material-symbols-outlined">
+       contact_mail
+       </span>&nbsp;Order</a>
+
+   <a href="#visit" class="navlink" ><span class="material-symbols-outlined">
+       nest_protect
+       </span>&nbsp;Contact</a>
+   </div>
+    </div>
+
+<!-- open  overlay element -->
+<button class="nav-overlay" aria-label="Navigation toggle" onclick="openNaV()"> <span class="material-symbols-outlined">
+   menu_open
+   </span>
+</button>
+<!-- Header paragraph 2 -->
+    <div class="headerp"><p>Unique bracelet</p>
+   <p>Delicate, ethereal designs crafted with nature's finest materials.</p></div>
+  </header> 
     <body>
         <main id="about-container">
           <div class="abouth1"><h1><strong>Eterna Luxe Support Center</strong></h1></div>
@@ -59,7 +91,7 @@
             </section>
                 <hr>
 <!-- support contact section -->
-                <section class="visit-us">
+                <section id="visit" class="visit-us">
                 <h2><strong>Get in Touch
                 </strong></h2> 
                 <!-- GET IN TOUCH  -->
@@ -102,11 +134,11 @@
         </main>
     </body>
     <footer> 
-        <div class="middle" id="contact-us">
+        <div class="middle" id="contactUs">
             <div>
             <div><h3>CONTACT</h3></div>
         
-           <div><a href="faq.html" class="link fl" target="_blank"><span class="material-symbols-outlined">
+           <div><a href="support.html" class="link fl" target="_blank"><span class="material-symbols-outlined">
                 contact_support</span>&nbsp;Support</a></div>
         
              <div><a href="store.html" class="link fl"><span class="material-symbols-outlined">store</span>&nbsp;Store</a></div>
@@ -141,7 +173,42 @@
         function topFunc() {
             document.body.scrollTop = 0; // for safari
             document.documentElement.scrollTop = 0; // other browsers
-        }</script>
+        }
+        
+        
+        // function for overlay
+        function openNaV() {
+
+document.getElementById("supportnav").style.width = "100%";
+
+document.body.style.overflow = "hidden"; // stop user from scrolling the background when the overlay is active
+}
+// function to close overlay
+
+function closeNaV() {
+document.getElementById("supportnav").style.width = "0%";
+document.body.style.overflow = ""; // Re-enable background scrolling
+
+}
+
+// ADD event listener to the navlinks
+
+const navLinks = document.querySelectorAll(".navlink");
+navLinks.forEach(link => {
+    link.addEventListener("click", (e) => {
+       // e.preventDefault(); //prevent default link behaviour
+        const  targetID  = link.getAttribute("href").substring(1);// get section id from the link href attribute
+        const targetSection = document.getElementById(targetID);
+        // smoothly scroll to target section 
+        targetSection.scrollIntoView({behavior: "smooth"});
+closeNaV();
+
+    });
+
+});
+
+        
+        </script>
            <script src="https://kit.fontawesome.com/184a11b74d.js" crossorigin="anonymous"></script>
 
 </body>
