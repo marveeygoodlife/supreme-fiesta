@@ -171,8 +171,7 @@ div.imageitem, .sectionimage {
     width: 100%;
     height: 100%;
     border-bottom: 2px solid var(--accentcolor);
-    transition:  2s ease-in;
-  }
+   }
 #image {
     transition: none;
     border-bottom: none;
@@ -182,7 +181,6 @@ div.imageitem, .sectionimage {
     margin: 1.5rem;
     left: 30;
     right: 30;
-    transform: scale(1.25) ;
    z-index: 10000;
    position: relative;
    max-width: 100%;
@@ -193,8 +191,7 @@ div.imageitem, .sectionimage {
  figcaption {
     text-transform: uppercase;
     padding-top: 10px;
-    transition: font-weight 2s ease-in-out;
-  }
+   }
  figcaption:hover {
 font-weight: 600;  }
  /* Image style end */
@@ -214,13 +211,17 @@ font-weight: 600;  }
     background-color: var(--primarycolor);
     margin: 2rem 0 2rem 0;
     border: none;
+    outline: none;
     font-size: 18px;
     font-weight: bold;
-    transition: 2s ease-in-out;
+    transition: 2s ease-in;
  }
 .btn:hover, .btn:focus {
     background-color:#1f5851d6;
-translate: -5px;}
+translate:  5px;
+scale: 1.025;
+
+}
 /* button style end */
 hr {
     height: 2px;
@@ -269,7 +270,23 @@ section.imageflex{
 /* MAIN STYLE START END */
 
 /* scroll to top button */
-#marvBtn, #marBtn {
+button.scrollbutton {
+    display: none;
+    position: fixed;
+    bottom: 2rem;
+    right: 10px;
+    z-index: 1000;
+    border: none;
+    outline: none;
+    background-color:#16423C;
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 18px;
+ }
+/* 
+#marBtn {
     display: none;
     position: fixed;
     bottom: 20px;
@@ -283,13 +300,7 @@ section.imageflex{
     padding: 5px;
     border-radius: 10px;
     font-size: 18px;
-    transition: 2s ease-in;
-}
-
-#marvBtn, #marBtn:hover {
-    background-color: #333;
-translate:5px 5px;
-}
+} */
 
 /* FOOTER STYLE START */
 footer { width: 100vw;
@@ -352,6 +363,13 @@ a.link:visited {
  #button, #email {
     width: 180px; border: inherit;
  }
+ #contact {
+    margin-top: 5rem;
+ }
+ #contact p {
+    color: white;
+    text-align: center;
+ }
  /* footer h3 style end */
 
 
@@ -368,6 +386,13 @@ a.link:visited {
     text-align: left;
     font-size: 1rem;
     line-height: 2;
+}
+.list-Items li {
+    list-style:square;
+}
+/* STORE PAGE STYLE */
+.storeli li {
+list-style: none;
 }
 #about-container section p {
     padding: 10px;

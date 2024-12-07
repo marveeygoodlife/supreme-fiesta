@@ -25,7 +25,7 @@
                 <p>Step into a world of elegance and sophistication at Eterna Luxe, your ultimate destination for timeless jewelry. </p>
                 <p>Our store is more than just a shopping space—it’s a haven where craftsmanship meets passion, and every piece tells a story. </p>
             </section>
-            <section class="list-items">
+            <section class="list-items storeli">
                 <h2>What Awaits You at Our Store?
                 </h2>
                 <ul class="ul">
@@ -38,15 +38,14 @@
                     <li><strong>💍 Custom Creations:&nbsp;</strong>Turn your vision into reality with our bespoke jewelry services. Whether it’s an engagement ring or a unique pendant, we bring your dream designs to life.</li>
                 </ul>
                 <hr>
-                <section class="visit-us"></section>
+                <section class="visit-us storeli"></section>
                 <h2><strong>Visit Us Today!</strong></h2>
                 <ul class="ul">
                 <li><strong>📍 Store Location:&nbsp;</strong><br>  <address>Shop 6b, Ed plaza, Ontaro.</address>
 
                 </li>
                 <li><strong>⏰ Opening Hours:&nbsp;</strong> <br>Mon-Sat: 10 AM - 8 PM | Sun: 11 AM - 6 PM</li>
-                <li><strong>📞 Contact Us:&nbsp;</strong><pre>+445404948
-                    +4456567676
+                <li><strong>📞 Contact Us:&nbsp;</strong><pre>+44540494890, +44565678676
                 </pre></li>
             </section>
             <hr>
@@ -56,41 +55,68 @@
                 <p>Explore our collections in a luxurious and welcoming environment designed to make your jewelry shopping a delightful experience.</p>
                 <p>At Eterna Luxe, we don’t just sell jewelry—we create memories that last forever.</p>
 
-                <div class="sparkle"><h4><strong><em>✨ Visit Us and Discover Your Sparkle Today! ✨</em></strong></h4>
+                <div class="sparkle storeli"><h4><strong>✨ Visit Us and Discover Your Sparkle Today! ✨</strong></h4>
             <ul class="ul"><li>Visit us in-store or online:&nbsp;<a href="https://marveeygoodlife.github.io/supreme-fiesta/" class="aboutlink">eterna luxe</a></li>
             
             <li>Follow us for the latest designs and exclusive offers: [Instagram/Facebook handle]</li></ul>
             </div>
             </section>
+            
             <div style="margin-top: 1.2rem;"><p><strong><em>✨ Eterna Luxe—Where Timeless Beauty Meets Modern Glamour ✨</em></strong></p></div>
             <!-- scrol to top button -->
-<div><button onclick="topFunc()" id="marvBtn" title="Go to top"><span class="material-symbols-outlined">
-    arrow_upward
-    </span></button>
-</div>
+            <div><button onclick="topFunc()" id="marBtn" title="Go to top" class="scrollbutton"><span class="material-symbols-outlined">
+                arrow_upward
+                </span></button>
+            </div>
         </main>
     </body>
-    <footer> <div  id="contact">
-        <p style="color: white;">&copy;&nbsp; <strong style="color: white; padding: 5px;">    All right reserved, 2024
-        </strong>
-        </p></div></footer>
-    <script>
-        const scrolltop = document.getElementById("marBtn");
-        // show button when user scroll down 30px from top of document
-        window.onscroll = function() {
-            scrollFunction()
-        };
-        function scrollFunction() {
-            if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
-             scrolltop.style.display ="block";   } else {
-                scrolltop.style.display = "none";
-             }
-        }
-        // scroll top on click of button 
-        function topFunc() {
-            document.body.scrollTop = 0; // for safari
-            document.documentElement.scrollTop = 0; // other browsers
-        }</script>
+    <footer> 
+        <div class="middle" id="contact-us">
+            <div>
+            <div><h3>CONTACT</h3></div>
+        
+           <div><a href="support.html" class="link fl" target="_blank"><span class="material-symbols-outlined">
+                contact_support</span>&nbsp;Support</a></div>
+        
+             <div><a href="store.html" class="link fl"><span class="material-symbols-outlined">store</span>&nbsp;Store</a></div>
+        
+            <div><a href="about.html" class="link fl"><i class="fa-regular fa-address-card"></i>&nbsp;About</a></div>
+        
+            <div><a href="#" class="link fl" target="_blank">Twitter (X)</a></div>
+        </div>
+        </div>
+    
+<div class="devcontact" id="contact">
+    <div>
+    <p>Designed by<a href="#" class="link fl" target="_blank">Marveey Goodlife</a>
+    </p></div>
+    <div>
+    <p> <strong>&copy;&nbsp;All right reserved, 2024
+    </strong>
+    </p></div>
+    </footer>
+    <script >
+        
+document.addEventListener("DOMContentLoaded", ()=>{
+    const topscroll = document.getElementById("marBtn");
+    // show button when user scroll down 30px from top of document
+    window.onscroll = function() {
+        scrollFunc()
+    };
+    function scrollFunc() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+         topscroll.style.display ="block";   } else {
+            topscroll.style.display = "none";
+         }
+    }
+    // scroll top on click of button 
+    
+})
+function topFunc() {
+        document.body.scrollTop = 0; // for safari
+        document.documentElement.scrollTop = 0; // other browsers
+    }
+        </script>
            <script src="https://kit.fontawesome.com/184a11b74d.js" crossorigin="anonymous"></script>
 
 </body>

@@ -25,7 +25,7 @@
                 <p>At Eterna Luxe, we believe that jewelry is more than just an accessory—it’s a statement of elegance, a symbol of love, and a mark of individuality.  </p>
                 <p>Our curated collections are crafted to celebrate your unique story, blending timeless craftsmanship with modern sophistication.</p>
             </section>
-            <section class="list-items">
+            <section class="list-Items">
                 <h2>Why Choose Us?
                 </h2>
                 <ul class="ul">
@@ -41,7 +41,7 @@
                 <li><strong>Bridal Bliss:&nbsp;</strong>Discover engagement rings and wedding bands that symbolize forever.</li>
                 <li><strong>Eternal Diamonds:&nbsp;</strong> Celebrate life's precious moments with our brilliant diamond jewelry</li></ul>
             </section>
-            <section class="connection">
+            <section class="connection  storeli">
                 <h3>Let’s Sparkle Together!
                 </h3>
                 <p>Visit our store or browse our online collection to find the perfect piece that speaks to you. </p>
@@ -56,18 +56,39 @@
             </section>
             <div style="margin-top: 1.2rem;"><p><strong><em>✨ Eterna Luxe—Where Timeless Beauty Meets Modern Glamour ✨</em></strong></p></div>
             <!-- scrol to top button -->
-<div><button onclick="topFunc()" id="marvBtn" title="Go to top"><span class="material-symbols-outlined">
+<div><button onclick="aboutFunction()" id="aboutBTN" title="Go to top" class="scrollbutton"><span class="material-symbols-outlined">
     arrow_upward
     </span></button>
 </div>
         </main>
     </body>
-    <footer> <div  id="contact">
-        <p style="color: white;">&copy;&nbsp; <strong style="color: white; padding: 5px;">    All right reserved, 2024
-        </strong>
-        </p></div></footer>
+    <footer> 
+        <div class="middle" id="contact-us">
+            <div>
+            <div><h3>CONTACT</h3></div>
+        
+           <div><a href="faq.html" class="link fl" target="_blank"><span class="material-symbols-outlined">
+                contact_support</span>&nbsp;Support</a></div>
+        
+             <div><a href="store.html" class="link fl"><span class="material-symbols-outlined">store</span>&nbsp;Store</a></div>
+        
+            <div><a href="about.html" class="link fl"><i class="fa-regular fa-address-card"></i>&nbsp;About</a></div>
+        
+            <div><a href="#" class="link fl" target="_blank">Twitter (X)</a></div>
+        </div>
+        </div>
+    
+<div class="devcontact" id="contact">
+    <div>
+    <p>Designed by<a href="#" class="link fl" target="_blank">Marveey Goodlife</a>
+    </p></div>
+    <div>
+    <p> <strong>&copy;&nbsp;All right reserved, 2024
+    </strong>
+    </p></div></footer>
     <script>
-        const scrolltop = document.getElementById("marBtn");
+        document.addEventListener("DOMContentLoaded", () => {
+            const scrolltop = document.getElementById("aboutBTN");
         // show button when user scroll down 30px from top of document
         window.onscroll = function() {
             scrollFunction()
@@ -78,11 +99,14 @@
                 scrolltop.style.display = "none";
              }
         }
-        // scroll top on click of button 
-        function topFunc() {
+       
+        })
+         // scroll top on click of button 
+         function aboutFunction() {
             document.body.scrollTop = 0; // for safari
             document.documentElement.scrollTop = 0; // other browsers
-        }</script>
+        }
+       </script>
            <script src="https://kit.fontawesome.com/184a11b74d.js" crossorigin="anonymous"></script>
 
 </body>

@@ -74,7 +74,7 @@
 
                 </li>
                 <li><strong>📍 Visit Us:
-                    :&nbsp;Drop by our store for in-person support. Find our address and hours on the <a href="#">Store page</a>
+                    :&nbsp;Drop by our store for in-person support. Find our address and hours on the <a href="/index.html" class="aboutlink" target="_blank">Store page</a>
                 </li>
             </section>
             <hr>
@@ -95,16 +95,36 @@
          
 
             <!-- scrol to top button -->
-<div><button onclick="topFunc()" id="marvBtn" title="Go to top"><span class="material-symbols-outlined">
+<div><button onclick="topFunc()" id="marBtn" class="scrollbutton" title="Go to top"><span class="material-symbols-outlined">
     arrow_upward
     </span></button>
 </div>
         </main>
     </body>
-    <footer> <div  id="contact">
-        <p style="color: white;">&copy;&nbsp; <strong style="color: white; padding: 5px;">    All right reserved, 2024
-        </strong>
-        </p></div></footer>
+    <footer> 
+        <div class="middle" id="contact-us">
+            <div>
+            <div><h3>CONTACT</h3></div>
+        
+           <div><a href="faq.html" class="link fl" target="_blank"><span class="material-symbols-outlined">
+                contact_support</span>&nbsp;Support</a></div>
+        
+             <div><a href="store.html" class="link fl"><span class="material-symbols-outlined">store</span>&nbsp;Store</a></div>
+        
+            <div><a href="about.html" class="link fl"><i class="fa-regular fa-address-card"></i>&nbsp;About</a></div>
+        
+            <div><a href="#" class="link fl" target="_blank">Twitter (X)</a></div>
+        </div>
+        </div>
+    
+<div class="devcontact" id="contact">
+    <div>
+    <p>Designed by<a href="#" class="link fl" target="_blank">Marveey Goodlife</a>
+    </p></div>
+    <div>
+    <p> <strong>&copy;&nbsp;All right reserved, 2024
+    </strong>
+    </p></div></footer>
     <script>
         const scrolltop = document.getElementById("marBtn");
         // show button when user scroll down 30px from top of document
