@@ -55,10 +55,10 @@ header.mainheader { width: 100%;
     background-position: left;
 background-image: url(images/pexels-anastasia-shuraeva-5705485.jpg);
 }
-div.headerTop {
-    top: 0;
+.left p {
+    color: white;
 }
-div.header, div.headerTop {
+div.header {
     background-image: unset;
     height: 70px;
     text-align: center;
@@ -497,7 +497,7 @@ body {
     font-size: 2.5rem;
 }
 
-.header, .headerTop {
+.header {
     position: static;
     top: 0;
     padding: 15px;
