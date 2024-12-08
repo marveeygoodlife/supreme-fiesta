@@ -129,6 +129,13 @@ text-decoration: underline;
     font-size: 24px;
     color: white;
 }
+.navlink.active {
+    font-weight: bold;
+    color: #ff4500; /* Highlight color */
+    text-decoration: underline;
+    font-size: 30rem;
+}
+
 /* open overlay button */
     .nav-overlay { 
         display: block;
