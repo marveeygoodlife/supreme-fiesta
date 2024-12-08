@@ -25,7 +25,7 @@
     <!-- NAVIGATION -->
     <div id="indexnav" class="overlay">
 <!-- toggle button to close overlay navigation -->
-<a href="javascript:void(0)" class="closebutton" ><span class="material-symbols-outlined">
+<a href="javascript:void(0)" class="closebutton" onclick="(closenav())"><span class="material-symbols-outlined">
     close_fullscreen
     </span></a>
 <!-- nav overlay content  -->
@@ -53,7 +53,7 @@
      </div>
 
 <!-- open  overlay element -->
-<button class="nav-overlay" aria-label="Navigation toggle" > <span class="material-symbols-outlined">
+<button class="nav-overlay" aria-label="Navigation toggle" onclick="opennav()"> <span class="material-symbols-outlined">
     menu_open
     </span>
 </button>
@@ -132,7 +132,7 @@
 </section>
 
 <!-- scrol to top button -->
-<div><button onclick="topFunction()" id="marvBtn" class="scrollbutton"title="Go to top"><span class="material-symbols-outlined">
+<div><button onclick="topScroll()" id="marvBtn" class="scrollbutton"title="Go to top"><span class="material-symbols-outlined">
     arrow_upward
     </span></button>
 </div>

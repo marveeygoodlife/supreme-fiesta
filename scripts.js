@@ -95,8 +95,7 @@ function handleResize() {
     if (window.innerWidth >= 1024) {
         // For larger screens, ensure overlay is always visible
         overlay.style.display = 'flex';
-        overlay.style.position = 'fixed';
-        console.log('ThIS IS GREAT')
+         console.log('ThIS IS GREAT')
     } else {
         // For smaller screens, ensure overlay is hidden initially
         console.log("small screen");
